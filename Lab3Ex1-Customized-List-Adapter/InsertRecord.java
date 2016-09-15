@@ -57,7 +57,7 @@ public class InsertRecord extends AppCompatActivity {
         values.put(BookDBContract.BookDbEntry.COLUMN_NAME_TITLE, etTitle.getText().toString().trim());
         values.put(BookDBContract.BookDbEntry.COLUMN_NAME_AUTHOR, etAuthor.getText().toString().trim());
 
-        db.insert("TBL_BOOK", null, values);
+        db.insert(BookDBContract.BookDbEntry.TABLE_NAME, null, values);
 
         clearForm();
         finishInsert();
